@@ -1,0 +1,61 @@
+:root {
+    --white: white;
+    --background: #1C1C1C;
+    --square-color: #1F2937;
+    --btn: #10B981;
+    --green: #4ADF86;
+    --break: #2F3E53;
+    --password: #273549;
+    --grey: #9CA3AF;
+    --result: #273549;
+}
+
+h1 {
+    color: var(--white);
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    text-align: center;
+    
+}
+.wrapper {
+    background-color: var(--square-color);
+    margin: 15px;
+    height: 80vh;
+}
+span {
+    color: var(--green)
+}
+
+.paragraph {
+    color: var(--grey);
+}
+button {
+    background-color: var(--btn);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    padding: 10px;
+}
+
+hr {
+    color: var(--break);
+    margin-top: 2rem;
+}
+
+.result1, .result2 {
+    background-color: var(--result);
+    height: 2rem;
+    width: 5rem;
+    border-radius: 10px;
+    color: var(--white);
+}
+
+.result-wrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
