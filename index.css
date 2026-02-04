@@ -58,8 +58,11 @@ button {
     min-width: fit-content;
 }
 #number {
-    min-width: 15%;
+  width: 160px;
+  box-sizing: border-box;
+  flex: 0 0 auto;
 }
+
 
 #number, button {
     height: 2.5em;
