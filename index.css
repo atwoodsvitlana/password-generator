@@ -6,24 +6,25 @@
     --green: #4ADF86;
     --break: #2F3E53;
     --password: #273549;
-    --grey: #9CA3AF;
+    --grey: #D3D3D3;
     --result: #273549;
 }
 
 h1 {
+    margin: 0;
+    padding-top: 1.5em;
     color: var(--white);
 }
 
 body {
-    margin: 0;
+    margin: 1.5em;
     background-color: var(--background);
     text-align: center;
-    
+    font-family: "Montserrat", sans-serif;
 }
 .wrapper {
     background-color: var(--square-color);
-    margin: 15px;
-    height: 80vh;
+    height: 95vh;
 }
 span {
     color: var(--green)
@@ -31,13 +32,48 @@ span {
 
 .paragraph {
     color: var(--grey);
+    margin: 0;
 }
+
+.wrapper-line {
+    padding-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.wrapper-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+}
+
+
 button {
     background-color: var(--btn);
+    color: var(--white);
+    min-width: fit-content;
+}
+#number {
+    min-width: 15%;
+}
+
+#number, button {
+    height: 2.5em;
     border: none;
     border-radius: 10px;
-    color: var(--white);
-    padding: 10px;
+    height: 2.5em;
+    width: 15%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+
 }
 
 hr {
@@ -45,17 +81,37 @@ hr {
     margin-top: 2rem;
 }
 
-.result1, .result2 {
+#result1, #result2 {
     background-color: var(--result);
+    min-width: fit-content;
     height: 2rem;
     width: 5rem;
     border-radius: 10px;
-    color: var(--white);
+    color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .6em 2em;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+#result1:active, #result2:active {
+  transform: scale(0.97);
+  background-color: #1F3A2E;
 }
 
 .result-wrapper {
+    padding-top: 2em;
     display: flex;
-    gap: 10px;
     justify-content: space-around;
     align-items: center;
+}
+
+@media (max-width: 800px) {
+    .wrapper, .result-wrapper, .wrapper-line, .wrapper-column {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
 }
