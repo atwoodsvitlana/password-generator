@@ -55,21 +55,21 @@ span {
 button {
     background-color: var(--btn);
     color: var(--white);
-    min-width: fit-content;
 }
 #number {
-  width: 160px;
   box-sizing: border-box;
   flex: 0 0 auto;
 }
 
 
 #number, button {
+    width: 180px;
     height: 2.5em;
+    box-sizing: border-box;
+    flex: 0 0 auto;
     border: none;
     border-radius: 10px;
     height: 2.5em;
-    width: 15%;
     text-align: center;
     font-family: "Montserrat", sans-serif;
 }
@@ -117,4 +117,15 @@ hr {
         flex-direction: column;
         gap: 2em;
     }
+
+    .wrapper {
+        padding: 1em;
+    }
+    .wrapper-line, .result-wrapper {
+        padding-top: 0;
+    }
+    #number,
+  button {
+    width: 160px;
+  }
 }

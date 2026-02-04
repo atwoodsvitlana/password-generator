@@ -32,7 +32,7 @@ const generatePassword = () => {
   }
 
   if (length < 5 || length > 15) {
-      alert("Incorrect password length. Choose 5–15.");
+      alert("Unsecure password length. Choose 5–15.");
       return;
   }
     result1.textContent = createPassword(length);
