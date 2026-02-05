@@ -24,7 +24,7 @@ body {
 }
 .wrapper {
     background-color: var(--square-color);
-    height: 95vh;
+    min-height: 95vh;
 }
 span {
     color: var(--green)
@@ -56,11 +56,6 @@ button {
     background-color: var(--btn);
     color: var(--white);
 }
-#number {
-  box-sizing: border-box;
-  flex: 0 0 auto;
-}
-
 
 #number, button {
     width: 180px;
@@ -85,17 +80,19 @@ hr {
 }
 
 #result1, #result2 {
+    width: 180px;
+    height: 2.5em;
+    padding: 0;
+    box-sizing: border-box;
     background-color: var(--result);
-    min-width: fit-content;
-    height: 2rem;
-    width: 5rem;
     border-radius: 10px;
     color: var(--green);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .6em 2em;
     cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    user-select: none;
     transition: transform 0.15s ease, background-color 0.15s ease;
 }
 
@@ -111,21 +108,44 @@ hr {
     align-items: center;
 }
 
+#number:focus,
+button:focus,
+#result1:focus,
+#result2:focus {
+  outline: 2px solid var(--btn);
+  outline-offset: 3px;
+}
+
 @media (max-width: 800px) {
-    .wrapper, .result-wrapper, .wrapper-line, .wrapper-column {
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-    }
+   .wrapper-line,
+  .result-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25em;
+  }
 
     .wrapper {
         padding: 1em;
     }
-    .wrapper-line, .result-wrapper {
+    /* .wrapper-line, .result-wrapper {
         padding-top: 0;
-    }
-    #number,
-  button {
-    width: 160px;
+    } */
+   #number,
+  button,
+  #result1,
+  #result2 {
+    width: min(320px, 90vw);
+    height: 48px;
+    box-sizing: border-box;
   }
+
+  #result1,
+  #result2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;  
+  }
+
 }
